@@ -1,0 +1,54 @@
+// Гнучке налаштування Flexbox
+@mixin flex-settings($align: stretch, $justify: flex-start, $gap: 0) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+// Універсальний міксин для переходів та анімацій
+@mixin transition($property) {
+    transition: $property $transition-duration $transition-timing-function;
+}
+
+@mixin animation($name, $duration: $transition-duration, $timing: $transition-timing-function) {
+    animation: $name $duration $timing forwards;
+}
+
+// Абсолютне позиціонування по центру
+@mixin position-center($position-type: absolute) {
+    position: $position-type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Новий міксин для секцій
+@mixin section($pt: 60px, $pb: 60px) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+// Міксін для фонових зображень
+@mixin feature-icon($image-url, $size: 70px, $position: center, $repeat: no-repeat) {
+    background-image: url(#{$image-url});
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+
+// Новий міксин для налаштування шрифтів
+@mixin font-settings($size, $weight: 500, $spacing: 0.02em, $height: null) {
+    font-family: $font-primary;
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $spacing;
+}
+
+// Міксін для ефекту наведення на посилання клієнтів
+@mixin customer-link-hover {
+    border-color: $accent-color;
+    color: $accent-color;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 20px rgba($accent-color, 0.12);
+}

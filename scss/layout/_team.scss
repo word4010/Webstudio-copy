@@ -1,0 +1,113 @@
+.team {
+    @include section;
+
+    @media screen and (min-width: $desktop) {
+        @include section(94px, 94px);
+    }
+
+    background-color: $bg-light-section;
+    text-align: center;
+}
+
+.team__title {
+    @extend %section-title;
+    margin-bottom: 60px;
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent;
+    --items: 1;
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+        --items: 2;
+    }
+
+    @media screen and (min-width: $desktop) {
+        --items: 4;
+    }
+}
+
+.team__card {
+    flex-basis: calc((100% - ($indent * (var(--items) - 1))) / var(--items));
+
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+    }
+
+    background-color: $bg-light;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__photo {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    @media screen and (min-width: $desktop) {
+        width: auto;
+    }
+}
+
+.team__content {
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 30px;
+    }
+}
+
+.team__name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+}
+
+.team__role {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: calc(19 / 16);
+
+    color: $text-secondary;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    color: $icon-primary;
+    transition: color $anim-fast, background-color $anim-fast;
+
+    &:hover,
+    &:focus {
+        color: $text-light;
+        background-color: $accent-color;
+    }
+}
+
+.socials__icon {
+    fill: currentColor;
+}

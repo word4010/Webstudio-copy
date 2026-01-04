@@ -1,0 +1,72 @@
+.features {
+    @include section;
+    @media screen and (min-width: $desktop) {
+        @include section(94px, 0);
+    }
+
+    background-color: $bg-light;
+}
+
+.features__list {
+    --items: 1;
+    @include flex-settings($gap: $indent); 
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) {
+        --items: 2;
+    }
+
+    @media screen and (min-width: $desktop) {
+        --items: 4;
+        flex-wrap: nowrap;
+    }
+}
+
+.features__container {
+    @include flex-settings(center, center); 
+    margin-bottom: $indent; 
+    width: 100%;
+    height: 120px;
+    background-color: $features-bg-color;
+    border-radius: 4px;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
+}
+
+.features__icons {
+    width: 70px;
+    height: 70px;
+}
+
+.features__subtitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: $text-primary;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+        text-align: center;
+    }
+}
+
+.features__text {
+    width: 100%;
+    line-height: calc(24 / 14);
+    color: $text-secondary; 
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
+}

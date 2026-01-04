@@ -1,0 +1,177 @@
+@keyframes changeColorToPrimary {
+    from {
+        color: $text-primary;
+    }
+
+    to {
+        color: $accent-color;
+    }
+}
+
+@keyframes scaleXFull {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes heroButtonHover {
+    from {
+        background-color: $brand-color;
+    }
+
+    to {
+        background-color: $button-hover-color;
+    }
+}
+
+@keyframes changeBgToPrimary {
+    from {
+        background-color: $bg-light;
+    }
+
+    to {
+        background-color: $accent-color;
+    }
+}
+
+@keyframes changeFillToWhite {
+    from {
+        fill: $icon-primary;
+    }
+
+    to {
+        fill: $text-light;
+    }
+}
+
+@keyframes changeBorderToBrand {
+    from {
+        border-color: $border-customer;
+    }
+
+    to {
+        border-color: $brand-color;
+    }
+}
+
+@keyframes changeFillToBrand {
+    from {
+        fill: $border-customer;
+    }
+
+    to {
+        fill: $brand-color;
+    }
+}
+
+@keyframes changeColorToAccent {
+    from {
+        color: $text-footer-link;
+    }
+
+    to {
+        color: $accent-color;
+    }
+}
+
+@keyframes portfolioCategoryHover {
+    from {
+        background-color: $bg-light-section;
+        color: $text-primary;
+    }
+
+    to {
+        background-color: $brand-color;
+        color: $text-light;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes addPortfolioShadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes addCategoryShadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@keyframes changeFillToPrimary {
+    from {
+        fill: $text-secondary;
+    }
+
+    to {
+        fill: $brand-color;
+    }
+}
+
+@keyframes changeFillToAccent {
+    from {
+        fill: $text-dark;
+    }
+
+    to {
+        fill: $accent-color;
+    }
+}
+
+@keyframes changeBorderToAccent {
+    from {
+        border-color: $border-input;
+    }
+
+    to {
+        border-color: $accent-color;
+    }
+}
+
+@keyframes iconHoverFill {
+    from {
+        fill: $icon-primary;
+    }
+
+    to {
+        fill: $accent-color;
+    }
+}
+
+@keyframes customerLinkHover {
+    from {
+        border-color: $border-customer;
+        color: $border-customer;
+        transform: translateY(0) scale(1);
+        box-shadow: none;
+    }
+
+    to {
+        border-color: $accent-color;
+        color: $accent-color;
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 10px 20px rgba($accent-color, 0.12);
+    }
+}
